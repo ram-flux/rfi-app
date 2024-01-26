@@ -1,0 +1,17 @@
+<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="23" cy="23" r="23" fill="#F3FBFD"/>
+<rect x="8" y="1" width="28" height="42" rx="5" fill="white" stroke="#32373C" stroke-width="2"/>
+<path d="M16 2H30V3C30 4.10457 29.1046 5 28 5H18C16.8954 5 16 4.10457 16 3V2Z" fill="#32373C"/>
+<circle cx="22" cy="16" r="9" fill="#619EFF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17 11H21.9999H22H26.9999V17.4872C26.9999 19.7436 23.6667 21.5299 22 22V22C22 22 22 22 22 22C22 22 21.9999 22 21.9999 22V22C20.3332 21.5299 17 19.7436 17 17.4872V11Z" fill="white"/>
+<path d="M20 16L22 17.5L25 14" stroke="#619EFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="11" y="28" width="6" height="2" rx="1" fill="#D3DBE6"/>
+<rect x="19" y="28" width="6" height="2" rx="1" fill="#D3DBE6"/>
+<rect x="27" y="28" width="6" height="2" rx="1" fill="#D3DBE6"/>
+<rect x="11" y="32" width="6" height="2" rx="1" fill="#D3DBE6"/>
+<rect x="19" y="32" width="6" height="2" rx="1" fill="#D3DBE6"/>
+<rect x="27" y="32" width="6" height="2" rx="1" fill="#D3DBE6"/>
+<rect x="11" y="36" width="6" height="2" rx="1" fill="#D3DBE6"/>
+<rect x="19" y="36" width="6" height="2" rx="1" fill="#D3DBE6"/>
+<rect x="27" y="36" width="6" height="2" rx="1" fill="#D3DBE6"/>
+</svg>
