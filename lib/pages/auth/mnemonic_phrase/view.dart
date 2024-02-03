@@ -6,7 +6,7 @@ import 'index.dart';
 import 'widgets/mnemonic_list.dart';
 
 class MnemonicPhrasePage extends GetView<MnemonicPhraseController> {
-  const MnemonicPhrasePage({Key? key}) : super(key: key);
+  const MnemonicPhrasePage({super.key});
 
   // 主视图
   Widget _buildView() {

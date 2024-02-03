@@ -5,8 +5,7 @@ import 'package:ramflux_app/shared/index.dart';
 class PlusPasswordForm extends StatefulWidget {
   final Function(String) onConfirmed;
 
-  const PlusPasswordForm({Key? key, required this.onConfirmed})
-      : super(key: key);
+  const PlusPasswordForm({super.key, required this.onConfirmed});
 
   @override
   State<PlusPasswordForm> createState() => _PlusPasswordFormState();
@@ -30,11 +29,12 @@ class _PlusPasswordFormState extends State<PlusPasswordForm> {
     return <Widget>[
       TextWidget.titleLarge(
         LocaleKeys.authVerifyMnemonicBottomSheetTitle.tr,
-        size: 24,
+        size: 20,
         weight: FontWeight.w600,
       ).marginOnly(bottom: 14),
       TextWidget.titleSmall(
         LocaleKeys.authVerifyMnemonicBottomSheetSubtitle.tr,
+        size: 14,
         color: AppColors.secondary,
       ).marginOnly(bottom: 24),
       Form(

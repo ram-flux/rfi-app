@@ -49,7 +49,7 @@ class ButtonWidget extends StatelessWidget {
   final double? height;
 
   const ButtonWidget({
-    Key? key,
+    super.key,
     this.type = ButtonWidgetType.none,
     this.onTap,
     this.text,
@@ -60,22 +60,22 @@ class ButtonWidget extends StatelessWidget {
     this.borderColor,
     this.width,
     this.height,
-  }) : super(key: key);
+  });
 
   /// 主要
   const ButtonWidget.primary(
     this.text, {
-    Key? key,
+    super.key,
     this.type = ButtonWidgetType.primary,
     this.width = double.infinity,
-    this.height = 50,
+    this.height = 40,
     this.onTap,
     this.borderRadius,
     this.child,
     this.backgroundColor,
     this.icon,
     this.borderColor,
-  }) : super(key: key);
+  });
 
   /// 次要
   /// [text] 文字
@@ -91,7 +91,7 @@ class ButtonWidget extends StatelessWidget {
   /// [borderColor] 边框色
   const ButtonWidget.secondary(
     this.text, {
-    Key? key,
+    super.key,
     this.type = ButtonWidgetType.secondary,
     this.width = double.infinity,
     this.height = 50,
@@ -101,12 +101,12 @@ class ButtonWidget extends StatelessWidget {
     this.backgroundColor,
     this.icon,
     this.borderColor,
-  }) : super(key: key);
+  });
 
   /// 文字
   ButtonWidget.text(
     this.text, {
-    Key? key,
+    super.key,
     this.type = ButtonWidgetType.text,
     this.onTap,
     Color? textColor,
@@ -118,18 +118,17 @@ class ButtonWidget extends StatelessWidget {
     this.borderColor,
     this.width,
     this.height,
-  })  : child = TextWidget.button(
+  }) : child = TextWidget.button(
           text: text!,
           size: textSize,
           color: textColor ?? AppColors.onPrimaryContainer,
           weight: textWeight,
-        ),
-        super(key: key);
+        );
 
   /// 图标
   const ButtonWidget.icon(
     this.icon, {
-    Key? key,
+    super.key,
     this.type = ButtonWidgetType.icon,
     this.onTap,
     this.text,
@@ -139,12 +138,12 @@ class ButtonWidget extends StatelessWidget {
     this.borderColor,
     this.width,
     this.height,
-  }) : super(key: key);
+  });
 
   /// 文字/填充
   ButtonWidget.textFilled(
     this.text, {
-    Key? key,
+    super.key,
     this.type = ButtonWidgetType.textFilled,
     Color? bgColor,
     Color? textColor,
@@ -162,13 +161,12 @@ class ButtonWidget extends StatelessWidget {
           size: textSize,
           color: textColor ?? AppColors.onPrimaryContainer,
           weight: textWeight,
-        ),
-        super(key: key);
+        );
 
   /// 文字/填充/圆形 按钮
   ButtonWidget.textRoundFilled(
     this.text, {
-    Key? key,
+    super.key,
     this.type = ButtonWidgetType.textRoundFilled,
     Color? bgColor,
     Color? textColor,
@@ -186,14 +184,13 @@ class ButtonWidget extends StatelessWidget {
           size: textSize,
           color: textColor ?? AppColors.onPrimaryContainer,
           weight: textWeight,
-        ),
-        super(key: key);
+        );
 
   /// 图标文字 上下
   ButtonWidget.iconTextUpDown(
     this.icon,
     this.text, {
-    Key? key,
+    super.key,
     this.type = ButtonWidgetType.iconTextUpDown,
     Color? textColor,
     double? textSize,
@@ -204,7 +201,7 @@ class ButtonWidget extends StatelessWidget {
     this.borderColor,
     this.width,
     this.height,
-  })  : child = <Widget>[
+  }) : child = <Widget>[
           icon!,
           TextWidget.button(
             text: text!,
@@ -214,14 +211,13 @@ class ButtonWidget extends StatelessWidget {
           ),
         ].toColumn(
           mainAxisSize: MainAxisSize.min,
-        ),
-        super(key: key);
+        );
 
   /// 图标 / 文字 / 边框
   ButtonWidget.iconTextOutlined(
     this.icon,
     this.text, {
-    Key? key,
+    super.key,
     this.type = ButtonWidgetType.iconTextOutlined,
     this.onTap,
     Color? textColor,
@@ -232,7 +228,7 @@ class ButtonWidget extends StatelessWidget {
     this.borderColor,
     this.width,
     this.height,
-  })  : child = <Widget>[
+  }) : child = <Widget>[
           icon!.paddingRight(AppSpace.iconTextSmall),
           TextWidget.button(
             text: text!,
@@ -242,14 +238,13 @@ class ButtonWidget extends StatelessWidget {
           ),
         ].toRow(
           mainAxisSize: MainAxisSize.min,
-        ),
-        super(key: key);
+        );
 
   /// 图标 / 文字 / 上下 / 边框
   ButtonWidget.iconTextUpDownOutlined(
     this.icon,
     this.text, {
-    Key? key,
+    super.key,
     this.type = ButtonWidgetType.iconTextUpDownOutlined,
     this.onTap,
     Color? textColor,
@@ -260,7 +255,7 @@ class ButtonWidget extends StatelessWidget {
     this.borderColor,
     this.width,
     this.height,
-  })  : child = <Widget>[
+  }) : child = <Widget>[
           icon!.paddingBottom(AppSpace.iconTextSmall),
           TextWidget.button(
             text: text!,
@@ -270,14 +265,13 @@ class ButtonWidget extends StatelessWidget {
           ),
         ].toColumn(
           mainAxisSize: MainAxisSize.min,
-        ),
-        super(key: key);
+        );
 
   /// 文字 / 图标
   ButtonWidget.textIcon(
     this.text,
     this.icon, {
-    Key? key,
+    super.key,
     Color? textColor,
     double? textSize,
     FontWeight? textWeight,
@@ -288,7 +282,7 @@ class ButtonWidget extends StatelessWidget {
     this.borderColor,
     this.width,
     this.height,
-  })  : child = <Widget>[
+  }) : child = <Widget>[
           TextWidget.button(
             text: text!,
             size: textSize,
@@ -298,14 +292,13 @@ class ButtonWidget extends StatelessWidget {
           icon!,
         ].toRow(
           mainAxisSize: MainAxisSize.min,
-        ),
-        super(key: key);
+        );
 
   /// 文字 / 图标 / dropdown
   ButtonWidget.dropdown(
     this.text,
     this.icon, {
-    Key? key,
+    super.key,
     Color? textColor,
     double? textSize,
     FontWeight? textWeight,
@@ -316,7 +309,7 @@ class ButtonWidget extends StatelessWidget {
     this.borderColor,
     this.width,
     this.height,
-  })  : child = <Widget>[
+  }) : child = <Widget>[
           // 文本
           TextWidget.button(
             text: text!,
@@ -330,8 +323,7 @@ class ButtonWidget extends StatelessWidget {
             .toRow(
               mainAxisSize: MainAxisSize.min,
             )
-            .paddingHorizontal(AppSpace.button),
-        super(key: key);
+            .paddingHorizontal(AppSpace.button);
 
   // 背景
   MaterialStateProperty<Color?>? get _backgroundColor {
@@ -391,6 +383,7 @@ class ButtonWidget extends StatelessWidget {
       case ButtonWidgetType.textFilled:
       case ButtonWidgetType.iconTextOutlined:
       case ButtonWidgetType.iconTextUpDownOutlined:
+      case ButtonWidgetType.icon:
         return MaterialStateProperty.all(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.all(

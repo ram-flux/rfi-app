@@ -6,7 +6,7 @@ import 'package:ramflux_app/shared/index.dart';
 import '../index.dart';
 
 class MainPage extends GetView<MainController> {
-  const MainPage({Key? key}) : super(key: key);
+  const MainPage({super.key});
 
   // 主视图
   Widget _buildView() {

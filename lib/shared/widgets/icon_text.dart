@@ -26,7 +26,7 @@ class IconTextWidget extends StatelessWidget {
 
   //  构造函数
   const IconTextWidget({
-    Key? key,
+    super.key,
     this.icon,
     this.text,
     this.iconData,
@@ -34,7 +34,7 @@ class IconTextWidget extends StatelessWidget {
     this.color,
     this.fontSize,
     this.iconPadding,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -52,7 +52,8 @@ Map<String, String> zh_CN = {
 
   // auth/verify_mnemonic
   LocaleKeys.authVerifyMnemonicAppBarTitle: '验证私钥助记词',
-  LocaleKeys.authVerifyMnemonicHintText: '请根据你记下的私钥助记词，按顺序输入；\n验证你备份的私钥助记词无误',
+  LocaleKeys.authVerifyMnemonicHintText: '请根据你记下的私钥助记词，按顺序输入 \n验证你备份的私钥助记词无误',
+  LocaleKeys.authVerifyMnemonicInputHintText: '请输入私钥助记词',
   LocaleKeys.authVerifyMnemonicTipsText:
       '助记词12,18,24等不同随机组成,请根据自己的单词填写，单个空格为一个',
   LocaleKeys.authVerifyMnemonicButtonText: '完成验证',
@@ -70,6 +71,9 @@ Map<String, String> zh_CN = {
 
   // chats/chatting
   LocaleKeys.chatsChattingMessageInputPlaceholder: '发送给@{name}',
+  LocaleKeys.chatsChattingVoiceRecordCancelText: '松开取消',
+  LocaleKeys.chatsChattingVoiceRecordText: '按住说话',
+  LocaleKeys.chatsChattingVoiceRecordStopText: '松开发送语音',
 
   // contacts/list
   LocaleKeys.contactsListAppBarTitle: '联系人',

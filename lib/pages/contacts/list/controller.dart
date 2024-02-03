@@ -10,7 +10,6 @@ class ContactListController extends GetxController {
   );
 
   void onRefresh() async {
-    await Future.delayed(const Duration(seconds: 2));
     refreshController.refreshCompleted();
 
     update(["contacts_list"]);

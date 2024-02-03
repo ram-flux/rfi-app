@@ -7,7 +7,7 @@ import 'package:ramflux_app/shared/index.dart';
 class ConversationListTile extends StatefulWidget {
   final void Function() onTap;
 
-  const ConversationListTile({Key? key, required this.onTap}) : super(key: key);
+  const ConversationListTile({super.key, required this.onTap});
 
   @override
   State<ConversationListTile> createState() => _ConversationListTileState();
@@ -21,18 +21,18 @@ class _ConversationListTileState extends State<ConversationListTile> {
       contentPadding: const EdgeInsetsDirectional.symmetric(horizontal: 10),
       leading: const AvatarWidget('https://picsum.photos/60'),
       title: <Widget>[
-        const TextWidget.titleMedium(
+        const TextWidget.titleSmall(
           'Pixsellz Team',
-          weight: FontWeight.w600,
+          weight: FontWeight.w500,
         ).marginOnly(right: 6),
         IconWidget.svg(AssetsIcons.muteSmallIconSvg, size: 12),
       ].toRow(),
       subtitle: <Widget>[
-        TextWidget.titleSmall(
+        TextWidget.bodyMedium(
           '👋🏻 IOS 13 Design Kit.',
           color: AppColors.onSecondary,
         ),
-        const TextWidget.bodyLarge(
+        const TextWidget.bodyMedium(
           'Hello, I am from Pixsellz Team and we are here to help you.',
           overflow: TextOverflow.ellipsis,
         ),

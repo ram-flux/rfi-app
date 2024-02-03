@@ -20,7 +20,7 @@ class BubbleWidget extends StatelessWidget {
   final TextStyle textStyle;
 
   const BubbleWidget({
-    Key? key,
+    super.key,
     this.isSender = true,
     required this.text,
     this.color = Colors.white70,
@@ -32,7 +32,7 @@ class BubbleWidget extends StatelessWidget {
       color: Colors.black87,
       fontSize: 16,
     ),
-  }) : super(key: key);
+  });
 
   ///chat bubble builder method
   @override

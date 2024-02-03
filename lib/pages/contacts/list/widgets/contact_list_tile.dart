@@ -4,7 +4,7 @@ import 'package:ramflux_app/shared/index.dart';
 class ContactListTile extends StatefulWidget {
   final void Function() onTap;
 
-  const ContactListTile({Key? key, required this.onTap}) : super(key: key);
+  const ContactListTile({super.key, required this.onTap});
 
   @override
   State<ContactListTile> createState() => _ContactListTileState();
@@ -14,16 +14,16 @@ class _ContactListTileState extends State<ContactListTile> {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      horizontalTitleGap: 25,
+      horizontalTitleGap: 18,
       contentPadding:
-          const EdgeInsetsDirectional.symmetric(horizontal: 10, vertical: 10),
+          const EdgeInsetsDirectional.symmetric(horizontal: 10, vertical: 5),
       leading: const AvatarWidget(
         'https://picsum.photos/50',
-        radius: 25,
+        radius: 20,
       ),
-      title: const TextWidget.titleMedium(
+      title: const TextWidget.titleSmall(
         'Kieron Dotson',
-        weight: FontWeight.w600,
+        weight: FontWeight.w500,
       ),
       onTap: widget.onTap,
     );

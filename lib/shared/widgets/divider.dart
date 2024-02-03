@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 /// 分隔条
 class DividerWidget extends StatelessWidget {
   const DividerWidget({
-    Key? key,
+    super.key,
     this.size,
-  }) : super(key: key);
+  });
 
   final double? size;
 

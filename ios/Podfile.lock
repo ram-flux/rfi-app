@@ -1,7 +1,26 @@
 PODS:
+  - device_info_plus (0.0.1):
+    - Flutter
   - Flutter (1.0.0)
+  - flutter_inappwebview (0.0.1):
+    - Flutter
+    - flutter_inappwebview/Core (= 0.0.1)
+    - OrderedSet (~> 5.0)
+  - flutter_inappwebview/Core (0.0.1):
+    - Flutter
+    - OrderedSet (~> 5.0)
+  - flutter_keyboard_visibility (0.0.1):
+    - Flutter
   - flutter_native_splash (0.0.1):
     - Flutter
+  - gal (1.0.0):
+    - Flutter
+    - FlutterMacOS
+  - image_picker_ios (0.0.1):
+    - Flutter
+  - irondash_engine_context (0.0.1):
+    - Flutter
+  - OrderedSet (5.0.0)
   - path_provider_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
@@ -10,33 +29,88 @@ PODS:
     - FlutterMacOS
   - smart_auth (0.0.1):
     - Flutter
+  - sqflite (0.0.3):
+    - Flutter
+    - FlutterMacOS
+  - super_native_extensions (0.0.1):
+    - Flutter
+  - url_launcher_ios (0.0.1):
+    - Flutter
+  - video_player_avfoundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
 
 DEPENDENCIES:
+  - device_info_plus (from `.symlinks/plugins/device_info_plus/ios`)
   - Flutter (from `Flutter`)
+  - flutter_inappwebview (from `.symlinks/plugins/flutter_inappwebview/ios`)
+  - flutter_keyboard_visibility (from `.symlinks/plugins/flutter_keyboard_visibility/ios`)
   - flutter_native_splash (from `.symlinks/plugins/flutter_native_splash/ios`)
+  - gal (from `.symlinks/plugins/gal/darwin`)
+  - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
+  - irondash_engine_context (from `.symlinks/plugins/irondash_engine_context/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
   - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
   - smart_auth (from `.symlinks/plugins/smart_auth/ios`)
+  - sqflite (from `.symlinks/plugins/sqflite/darwin`)
+  - super_native_extensions (from `.symlinks/plugins/super_native_extensions/ios`)
+  - url_launcher_ios (from `.symlinks/plugins/url_launcher_ios/ios`)
+  - video_player_avfoundation (from `.symlinks/plugins/video_player_avfoundation/darwin`)
+
+SPEC REPOS:
+  trunk:
+    - OrderedSet
 
 EXTERNAL SOURCES:
+  device_info_plus:
+    :path: ".symlinks/plugins/device_info_plus/ios"
   Flutter:
     :path: Flutter
+  flutter_inappwebview:
+    :path: ".symlinks/plugins/flutter_inappwebview/ios"
+  flutter_keyboard_visibility:
+    :path: ".symlinks/plugins/flutter_keyboard_visibility/ios"
   flutter_native_splash:
     :path: ".symlinks/plugins/flutter_native_splash/ios"
+  gal:
+    :path: ".symlinks/plugins/gal/darwin"
+  image_picker_ios:
+    :path: ".symlinks/plugins/image_picker_ios/ios"
+  irondash_engine_context:
+    :path: ".symlinks/plugins/irondash_engine_context/ios"
   path_provider_foundation:
     :path: ".symlinks/plugins/path_provider_foundation/darwin"
   shared_preferences_foundation:
     :path: ".symlinks/plugins/shared_preferences_foundation/darwin"
   smart_auth:
     :path: ".symlinks/plugins/smart_auth/ios"
+  sqflite:
+    :path: ".symlinks/plugins/sqflite/darwin"
+  super_native_extensions:
+    :path: ".symlinks/plugins/super_native_extensions/ios"
+  url_launcher_ios:
+    :path: ".symlinks/plugins/url_launcher_ios/ios"
+  video_player_avfoundation:
+    :path: ".symlinks/plugins/video_player_avfoundation/darwin"
 
 SPEC CHECKSUMS:
-  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  device_info_plus: c6fb39579d0f423935b0c9ce7ee2f44b71b9fce6
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  flutter_inappwebview: 3d32228f1304635e7c028b0d4252937730bbc6cf
+  flutter_keyboard_visibility: 0339d06371254c3eb25eeb90ba8d17dca8f9c069
   flutter_native_splash: 52501b97d1c0a5f898d687f1646226c1f93c56ef
+  gal: 61e868295d28fe67ffa297fae6dacebf56fd53e1
+  image_picker_ios: 99dfe1854b4fa34d0364e74a78448a0151025425
+  irondash_engine_context: 3458bf979b90d616ffb8ae03a150bafe2e860cc9
+  OrderedSet: aaeb196f7fef5a9edf55d89760da9176ad40b93c
   path_provider_foundation: 3784922295ac71e43754bd15e0653ccfd36a147c
   shared_preferences_foundation: b4c3b4cddf1c21f02770737f147a3f5da9d39695
   smart_auth: 4bedbc118723912d0e45a07e8ab34039c19e04f2
+  sqflite: 673a0e54cc04b7d6dba8d24fb8095b31c3a99eec
+  super_native_extensions: 4916b3c627a9c7fffdc48a23a9eca0b1ac228fa7
+  url_launcher_ios: bbd758c6e7f9fd7b5b1d4cde34d2b95fcce5e812
+  video_player_avfoundation: 02011213dab73ae3687df27ce441fbbcc82b5579
 
-PODFILE CHECKSUM: 70d9d25280d0dd177a5f637cdb0f0b0b12c6a189
+PODFILE CHECKSUM: 7be2f5f74864d463a8ad433546ed1de7e0f29aef
 
-COCOAPODS: 1.12.0
+COCOAPODS: 1.14.3

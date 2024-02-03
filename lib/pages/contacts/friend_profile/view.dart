@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'index.dart';
 
 class FriendProfilePage extends GetView<FriendProfileController> {
-  const FriendProfilePage({Key? key}) : super(key: key);
+  const FriendProfilePage({super.key});
 
   // 主视图
   Widget _buildView() {

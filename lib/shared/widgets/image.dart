@@ -43,7 +43,7 @@ class ImageWidget extends StatelessWidget {
   )? builder;
 
   const ImageWidget({
-    Key? key,
+    super.key,
     required this.type,
     required this.url,
     this.radius,
@@ -53,11 +53,11 @@ class ImageWidget extends StatelessWidget {
     this.placeholder,
     this.backgroundColor,
     this.builder,
-  }) : super(key: key);
+  });
 
   const ImageWidget.url(
     this.url, {
-    Key? key,
+    super.key,
     this.radius,
     this.width,
     this.height,
@@ -65,12 +65,11 @@ class ImageWidget extends StatelessWidget {
     this.placeholder,
     this.backgroundColor,
     this.builder,
-  })  : type = ImageWidgetType.network,
-        super(key: key);
+  }) : type = ImageWidgetType.network;
 
   const ImageWidget.asset(
     this.url, {
-    Key? key,
+    super.key,
     this.radius,
     this.width,
     this.height,
@@ -78,12 +77,11 @@ class ImageWidget extends StatelessWidget {
     this.placeholder,
     this.backgroundColor,
     this.builder,
-  })  : type = ImageWidgetType.asset,
-        super(key: key);
+  }) : type = ImageWidgetType.asset;
 
   const ImageWidget.file(
     this.url, {
-    Key? key,
+    super.key,
     this.radius,
     this.width,
     this.height,
@@ -91,8 +89,7 @@ class ImageWidget extends StatelessWidget {
     this.placeholder,
     this.backgroundColor,
     this.builder,
-  })  : type = ImageWidgetType.file,
-        super(key: key);
+  }) : type = ImageWidgetType.file;
 
   Widget get _placeholder =>
       placeholder ??

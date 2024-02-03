@@ -6,7 +6,7 @@ import 'package:ramflux_app/shared/index.dart';
 import 'index.dart';
 
 class ContactListPage extends GetView<ContactListController> {
-  const ContactListPage({Key? key}) : super(key: key);
+  const ContactListPage({super.key});
 
   // Empty placeholder
   Widget _buildEmptyPlaceholder() {
@@ -36,7 +36,7 @@ class ContactListPage extends GetView<ContactListController> {
       separatorBuilder: (BuildContext context, int index) {
         return const Divider(
           height: 1,
-          indent: 80,
+          indent: 60,
         );
       },
     );

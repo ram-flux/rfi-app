@@ -10,7 +10,6 @@ class ConversationsController extends GetxController {
   );
 
   void onRefresh() async {
-    await Future.delayed(const Duration(seconds: 2));
     refreshController.refreshCompleted();
 
     update(["conversations"]);

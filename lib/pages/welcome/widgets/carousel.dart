@@ -4,14 +4,14 @@ import 'package:get/get.dart';
 import 'package:ramflux_app/shared/index.dart';
 
 class Carousel extends StatefulWidget {
-  const Carousel({Key? key}) : super(key: key);
+  const Carousel({super.key});
 
   @override
   State<StatefulWidget> createState() => _CarouselState();
 }
 
 class _CarouselState extends State<Carousel> {
-  int _current = 0;
+  final Rx<int> _current = 0.obs;
 
   final List<SliderModel> sliderList = [
     SliderModel(
@@ -38,14 +38,14 @@ class _CarouselState extends State<Carousel> {
                   children: [
                     TypographyText(
                       LocaleKeys.welcomeTitle.tr,
-                      textStyle: TypographyStyle.displaySmall,
+                      textStyle: TypographyStyle.titleLarge,
                     ),
                     const SizedBox(
                       height: 20,
                     ),
                     TypographyText(
                       LocaleKeys.welcomeSubtitle.tr,
-                      textStyle: TypographyStyle.titleMedium,
+                      textStyle: TypographyStyle.titleSmall,
                       textAlign: TextAlign.center,
                       color: Theme.of(context).colorScheme.secondary,
                       fontWeight: FontWeight.w500,
@@ -67,29 +67,29 @@ class _CarouselState extends State<Carousel> {
               autoPlay: true,
               viewportFraction: 1.0,
               onPageChanged: (index, _) {
-                setState(() {
-                  _current = index;
-                });
+                _current.value = index;
               },
             ),
           ),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: sliders.asMap().entries.map((entry) {
-            bool isActive = _current == entry.key;
-            return AnimatedContainer(
-              duration: const Duration(milliseconds: 200),
-              width: isActive ? 58.0 : 24.0,
-              height: 10.0,
-              margin: const EdgeInsets.symmetric(horizontal: 4.0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: (Theme.of(context).colorScheme.primary)
-                    .withOpacity(isActive ? 1.0 : 0.4),
-              ),
-            );
-          }).toList(),
+        Obx(
+          () => Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: sliders.asMap().entries.map((entry) {
+              bool isActive = _current.value == entry.key;
+              return AnimatedContainer(
+                duration: const Duration(milliseconds: 200),
+                width: isActive ? 40.0 : 20.0,
+                height: 6.0,
+                margin: const EdgeInsets.symmetric(horizontal: 4.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: (Theme.of(context).colorScheme.primary)
+                      .withOpacity(isActive ? 1.0 : 0.4),
+                ),
+              );
+            }).toList(),
+          ),
         ),
       ],
     );

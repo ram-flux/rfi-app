@@ -5,7 +5,7 @@ class SplashController extends GetxController {
   SplashController();
 
   void redirect() {
-    Get.offAllNamed(RouteNames.main);
+    Get.offAllNamed(RouteNames.welcome);
   }
 
   @override

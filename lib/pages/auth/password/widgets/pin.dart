@@ -23,14 +23,14 @@ class PinPutWidget extends StatelessWidget {
   final int? length;
 
   const PinPutWidget({
-    Key? key,
+    super.key,
     this.onSubmit,
     this.onChanged,
     this.focusNode,
     this.controller,
     this.validator,
     this.length,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

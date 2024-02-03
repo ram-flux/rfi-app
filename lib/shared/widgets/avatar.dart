@@ -16,10 +16,10 @@ class AvatarWidget extends StatelessWidget {
 
   const AvatarWidget.asset(
     this.url, {
-    Key? key,
+    super.key,
     this.type = AvatarWidgetType.asset,
     this.radius,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class AvatarWidget extends StatelessWidget {
       image = NetworkImage(url!);
     }
     return CircleAvatar(
-      radius: radius ?? 30,
+      radius: radius ?? 25,
       foregroundImage: image,
     );
   }

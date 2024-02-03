@@ -47,5 +47,9 @@
 		<true/>
 		<key>UIStatusBarHidden</key>
 		<false/>
+		<key>NSMicrophoneUsageDescription</key>
+		<string>This app requires Mic permission.</string>
+		<key>NSPhotoLibraryUsageDescription</key>
+		<string>In order to access your photo library</string>
 	</dict>
 </plist>

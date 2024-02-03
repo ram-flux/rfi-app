@@ -7,7 +7,7 @@ import 'widgets/plus_password_form.dart';
 import 'widgets/tag_input.dart';
 
 class VerifyMnemonicPage extends GetView<VerifyMnemonicController> {
-  const VerifyMnemonicPage({Key? key}) : super(key: key);
+  const VerifyMnemonicPage({super.key});
 
   // 主视图
   Widget _buildView() {
@@ -35,7 +35,7 @@ class VerifyMnemonicPage extends GetView<VerifyMnemonicController> {
                 color: AppColors.background,
                 padding: EdgeInsets.symmetric(
                   horizontal: AppSpace.page,
-                  vertical: 24,
+                  vertical: 20,
                 ),
                 child: PlusPasswordForm(
                   onConfirmed: controller.onPlusPasswordFormConfirmed,
@@ -58,7 +58,7 @@ class VerifyMnemonicPage extends GetView<VerifyMnemonicController> {
             titleString: LocaleKeys.authVerifyMnemonicAppBarTitle.tr,
           ),
           body: SafeArea(
-            child: _buildView(),
+            child: SingleChildScrollView(child: _buildView()),
           ),
         );
       },

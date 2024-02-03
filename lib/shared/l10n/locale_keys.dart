@@ -54,6 +54,8 @@ class LocaleKeys {
   static const authVerifyMnemonicAppBarTitle =
       'auth_verify_mnemonicApp_bar_title';
   static const authVerifyMnemonicHintText = 'auth_verify_mnemonic_hint_text';
+  static const authVerifyMnemonicInputHintText =
+      'auth_verify_mnemonic_input_hint_text';
   static const authVerifyMnemonicTipsText = 'auth_verify_mnemonic_tips_text';
   static const authVerifyMnemonicButtonText =
       'auth_verify_mnemonic_button_text';
@@ -81,6 +83,12 @@ class LocaleKeys {
   // chats/chatting
   static const chatsChattingMessageInputPlaceholder =
       'chats_chatting_message_input_placeholder';
+  static const chatsChattingVoiceRecordText =
+      'chats_chatting_voice_record_text';
+  static const chatsChattingVoiceRecordStopText =
+      'chats_chatting_voice_record_stop_text';
+  static const chatsChattingVoiceRecordCancelText =
+      'chats_chatting_voice_record_cancel_text';
 
   // contacts/list
   static const contactsListAppBarTitle = 'contacts_listApp_bar_title';

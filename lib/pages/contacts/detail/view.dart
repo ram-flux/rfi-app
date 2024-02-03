@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'index.dart';
 
 class ContactDetailPage extends GetView<ContactDetailController> {
-  const ContactDetailPage({Key? key}) : super(key: key);
+  const ContactDetailPage({super.key});
 
   // 主视图
   Widget _buildView() {

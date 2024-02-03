@@ -6,7 +6,7 @@ import 'index.dart';
 import 'widgets/pin.dart';
 
 class PasswordPage extends GetView<PasswordController> {
-  const PasswordPage({Key? key}) : super(key: key);
+  const PasswordPage({super.key});
 
   Widget _buildForm() {
     return Form(

@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'index.dart';
 
 class FriendRequestsPage extends GetView<FriendRequestsController> {
-  const FriendRequestsPage({Key? key}) : super(key: key);
+  const FriendRequestsPage({super.key});
 
   // 主视图
   Widget _buildView() {

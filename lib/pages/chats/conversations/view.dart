@@ -6,7 +6,7 @@ import 'package:ramflux_app/shared/index.dart';
 import 'index.dart';
 
 class ConversationsPage extends GetView<ConversationsController> {
-  const ConversationsPage({Key? key}) : super(key: key);
+  const ConversationsPage({super.key});
 
   // Empty placeholder
   Widget _buildEmptyPlaceholder() {
@@ -26,43 +26,43 @@ class ConversationsPage extends GetView<ConversationsController> {
   // List view
   Widget _buildListView() {
     // return _buildEmptyPlaceholder();
-    return ListView.separated(
-      itemCount: 10,
-      itemBuilder: (BuildContext context, int index) {
-        return ConversationSlidableWidget(
-          onNotShownPressed: controller.onNotShownPressed,
-          onMutePressed: controller.onMutePressed,
-          onDeletePressed: controller.onDeletePressed,
-          onArchivePressed: controller.onArchivePressed,
-          onAddMenuPressed: controller.onAddMenuPressed,
-          onPinPressed: controller.onPinPressed,
-          child: ConversationListTile(
-            onTap: () {
-              Get.toNamed(RouteNames.chatsChatting);
-            },
-          ),
-        );
-      },
-      separatorBuilder: (BuildContext context, int index) {
-        return const Divider(
-          height: 1,
-          indent: 80,
-        );
-      },
-    );
+    return SmartRefresher(
+      controller: controller.refreshController,
+      enablePullDown: true,
+      enablePullUp: false,
+      onRefresh: controller.onRefresh,
+      child: ListView.separated(
+        itemCount: 10,
+        itemBuilder: (BuildContext context, int index) {
+          return ConversationSlidableWidget(
+            onNotShownPressed: controller.onNotShownPressed,
+            onMutePressed: controller.onMutePressed,
+            onDeletePressed: controller.onDeletePressed,
+            onArchivePressed: controller.onArchivePressed,
+            onAddMenuPressed: controller.onAddMenuPressed,
+            onPinPressed: controller.onPinPressed,
+            child: ConversationListTile(
+              onTap: () {
+                Get.toNamed(RouteNames.chatsChatting);
+              },
+            ),
+          );
+        },
+        separatorBuilder: (BuildContext context, int index) {
+          return const Divider(
+            height: 1,
+            indent: 70,
+          );
+        },
+      ),
+    ).expanded();
   }
 
   // 主视图
   Widget _buildView() {
     return <Widget>[
       const SearchBarWidget(),
-      SmartRefresher(
-        controller: controller.refreshController,
-        enablePullDown: true,
-        enablePullUp: false,
-        onRefresh: controller.onRefresh,
-        child: _buildListView(),
-      ).expanded(),
+      _buildListView(),
     ].toColumn();
   }
 

@@ -3,7 +3,7 @@ import 'package:bip39/bip39.dart' as bip39;
 import 'package:ramflux_app/shared/index.dart';
 
 class MnemonicList extends StatefulWidget {
-  const MnemonicList({Key? key}) : super(key: key);
+  const MnemonicList({super.key});
 
   @override
   State<MnemonicList> createState() => _MnemonicListState();
@@ -15,8 +15,8 @@ class _MnemonicListState extends State<MnemonicList> {
   Widget _buildItem(String text, int index) {
     return Chip(
       label: Container(
-        width: 140,
-        height: 38,
+        width: 90,
+        height: 30,
         alignment: Alignment.center,
         child: <Widget>[
           Expanded(

@@ -25,11 +25,11 @@ class BuildNavigation extends StatelessWidget {
   final Function(int) onTap;
 
   const BuildNavigation({
-    Key? key,
+    super.key,
     required this.currentIndex,
     required this.items,
     required this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

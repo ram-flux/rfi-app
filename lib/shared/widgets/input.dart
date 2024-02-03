@@ -77,7 +77,7 @@ class InputWidget extends StatelessWidget {
   final EdgeInsetsGeometry? contentPadding;
 
   const InputWidget({
-    Key? key,
+    super.key,
     this.type = InputWidgetType.none,
     this.onSubmitted,
     this.controller,
@@ -99,11 +99,11 @@ class InputWidget extends StatelessWidget {
     this.borderColor,
     this.borderRadius,
     this.onChanged,
-  }) : super(key: key);
+  });
 
   /// 文本输入
   const InputWidget.text({
-    Key? key,
+    super.key,
     this.type = InputWidgetType.text,
     this.controller,
     this.onSubmitted,
@@ -125,11 +125,11 @@ class InputWidget extends StatelessWidget {
     this.borderColor,
     this.borderRadius,
     this.onChanged,
-  }) : super(key: key);
+  });
 
   /// 文本输入 - 边框
   const InputWidget.textBorder({
-    Key? key,
+    super.key,
     this.type = InputWidgetType.textBorder,
     this.onSubmitted,
     this.focusNode,
@@ -151,11 +151,11 @@ class InputWidget extends StatelessWidget {
     this.borderRadius,
     this.controller,
     this.onChanged,
-  }) : super(key: key);
+  });
 
   /// 文本输入 - 填充
   InputWidget.textFilled({
-    Key? key,
+    super.key,
     this.type = InputWidgetType.textFilled,
     Color? fillColor, // 输入颜色
     this.onSubmitted,
@@ -177,13 +177,12 @@ class InputWidget extends StatelessWidget {
     this.borderRadius,
     this.onChanged,
     this.controller,
-  })  : fillColor = fillColor ?? AppColors.surface.withOpacity(0.5),
-        super(key: key);
+  }) : fillColor = fillColor ?? AppColors.surface.withOpacity(0.5);
 
   /// 文本输入 - 图标文本填充
   InputWidget.iconTextFilled(
     this.icon, {
-    Key? key,
+    super.key,
     this.type = InputWidgetType.iconTextFilled,
     Color? fillColor, // 输入颜色
     this.onSubmitted,
@@ -204,13 +203,12 @@ class InputWidget extends StatelessWidget {
     this.borderRadius,
     this.onChanged,
     this.controller,
-  })  : fillColor = fillColor ?? AppColors.surface.withOpacity(0.5),
-        super(key: key);
+  }) : fillColor = fillColor ?? AppColors.surface.withOpacity(0.5);
 
   /// 文本输入 - 后缀图标文本填充
   InputWidget.suffixTextFilled(
     this.suffixIcon, {
-    Key? key,
+    super.key,
     this.type = InputWidgetType.suffixTextFilled,
     Color? fillColor, // 输入颜色
     this.icon,
@@ -231,12 +229,11 @@ class InputWidget extends StatelessWidget {
     this.borderRadius,
     this.onChanged,
     this.controller,
-  })  : fillColor = fillColor ?? AppColors.surface.withOpacity(0.5),
-        super(key: key);
+  }) : fillColor = fillColor ?? AppColors.surface.withOpacity(0.5);
 
   /// 搜索
   InputWidget.search({
-    Key? key,
+    super.key,
     this.type = InputWidgetType.search,
     Color? fillColor, // 输入颜色
     Widget? icon,
@@ -263,8 +260,7 @@ class InputWidget extends StatelessWidget {
               Icons.search,
               color: AppColors.outline,
             ),
-        fillColor = fillColor ?? AppColors.tertiary,
-        super(key: key);
+        fillColor = fillColor ?? AppColors.tertiary;
 
   // 边框
   InputBorder? get _border {

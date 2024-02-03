@@ -31,7 +31,7 @@ class TypographyText extends StatelessWidget {
 
   const TypographyText(
     this.text, {
-    Key? key,
+    super.key,
     this.textStyle = TypographyStyle.bodyMedium,
     this.color,
     this.textAlign,
@@ -40,7 +40,7 @@ class TypographyText extends StatelessWidget {
     this.overflow,
     this.maxLines,
     this.fontWeight,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

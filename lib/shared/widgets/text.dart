@@ -32,7 +32,7 @@ class TextWidget extends StatelessWidget {
   final TextAlign? textAlign;
 
   const TextWidget({
-    Key? key,
+    super.key,
     required this.text,
     this.style,
     this.maxLines = 1,
@@ -42,12 +42,12 @@ class TextWidget extends StatelessWidget {
     this.size,
     this.weight,
     this.textAlign,
-  }) : super(key: key);
+  });
 
   /// 文字 - 标题1
   const TextWidget.titleLarge(
     this.text, {
-    Key? key,
+    super.key,
     this.maxLines = 1,
     this.softWrap = false,
     this.overflow = TextOverflow.clip,
@@ -55,16 +55,15 @@ class TextWidget extends StatelessWidget {
     this.size,
     this.weight,
     this.textAlign,
-  })  : style = const TextStyle(
+  }) : style = const TextStyle(
           fontSize: 24,
           fontWeight: FontWeight.w500,
-        ),
-        super(key: key);
+        );
 
   /// 文字 - 标题2
   const TextWidget.titleMedium(
     this.text, {
-    Key? key,
+    super.key,
     this.maxLines = 1,
     this.softWrap = false,
     this.overflow = TextOverflow.clip,
@@ -72,16 +71,15 @@ class TextWidget extends StatelessWidget {
     this.size,
     this.weight,
     this.textAlign,
-  })  : style = const TextStyle(
+  }) : style = const TextStyle(
           fontSize: 18,
           fontWeight: FontWeight.w500,
-        ),
-        super(key: key);
+        );
 
   /// 文字 - 标题3
   const TextWidget.titleSmall(
     this.text, {
-    Key? key,
+    super.key,
     this.maxLines = 1,
     this.softWrap = false,
     this.overflow = TextOverflow.clip,
@@ -89,16 +87,15 @@ class TextWidget extends StatelessWidget {
     this.size,
     this.weight,
     this.textAlign,
-  })  : style = const TextStyle(
+  }) : style = const TextStyle(
           fontSize: 15,
           fontWeight: FontWeight.w500,
-        ),
-        super(key: key);
+        );
 
   /// 文字 - 正文1
   const TextWidget.bodyLarge(
     this.text, {
-    Key? key,
+    super.key,
     this.maxLines = 1,
     this.softWrap = false,
     this.overflow = TextOverflow.clip,
@@ -106,16 +103,15 @@ class TextWidget extends StatelessWidget {
     this.size,
     this.weight,
     this.textAlign,
-  })  : style = const TextStyle(
+  }) : style = const TextStyle(
           fontSize: 15,
           fontWeight: FontWeight.w500,
-        ),
-        super(key: key);
+        );
 
   /// 文字 - 正文2
   const TextWidget.bodyMedium(
     this.text, {
-    Key? key,
+    super.key,
     this.maxLines = 1,
     this.softWrap = false,
     this.overflow = TextOverflow.clip,
@@ -123,16 +119,15 @@ class TextWidget extends StatelessWidget {
     this.size,
     this.weight,
     this.textAlign,
-  })  : style = const TextStyle(
+  }) : style = const TextStyle(
           fontSize: 12,
           fontWeight: FontWeight.w400,
-        ),
-        super(key: key);
+        );
 
   /// 文字 - 正文3
   const TextWidget.bodySmall(
     this.text, {
-    Key? key,
+    super.key,
     this.maxLines = 1,
     this.softWrap = false,
     this.overflow = TextOverflow.clip,
@@ -140,15 +135,14 @@ class TextWidget extends StatelessWidget {
     this.size,
     this.weight,
     this.textAlign,
-  })  : style = const TextStyle(
+  }) : style = const TextStyle(
           fontSize: 9,
           fontWeight: FontWeight.w300,
-        ),
-        super(key: key);
+        );
 
   /// 文字 - 按钮
   TextWidget.button({
-    Key? key,
+    super.key,
     required this.text,
     this.maxLines = 1,
     this.softWrap = false,
@@ -163,13 +157,12 @@ class TextWidget extends StatelessWidget {
           fontWeight: FontWeight.w600,
           color: color,
           letterSpacing: 1.0,
-        ),
-        super(key: key);
+        );
 
   /// 文字 - 导航
   const TextWidget.navigation(
     this.text, {
-    Key? key,
+    super.key,
     this.maxLines = 1,
     this.softWrap = false,
     this.overflow = TextOverflow.clip,
@@ -177,11 +170,10 @@ class TextWidget extends StatelessWidget {
     this.size,
     this.weight,
     this.textAlign,
-  })  : style = const TextStyle(
+  }) : style = const TextStyle(
           fontSize: 18,
           fontWeight: FontWeight.w100,
-        ),
-        super(key: key);
+        );
 
   @override
   Widget build(BuildContext context) {

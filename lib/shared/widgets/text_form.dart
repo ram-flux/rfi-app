@@ -65,7 +65,7 @@ class TextFormFieldWidget extends StatefulWidget {
   final Function()? onTap;
 
   const TextFormFieldWidget({
-    Key? key,
+    super.key,
     this.controller,
     this.autofocus = false,
     this.labelText,
@@ -81,7 +81,7 @@ class TextFormFieldWidget extends StatefulWidget {
     this.borderRadius,
     this.borderColor,
     this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   State<TextFormFieldWidget> createState() => _TextFormFieldWidgetState();
@@ -118,7 +118,7 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
           filled: false,
           contentPadding: const EdgeInsets.symmetric(
             horizontal: 12,
-            vertical: 14,
+            vertical: 0,
           ),
         );
     return TextFormField(

@@ -5,7 +5,7 @@ import 'package:ramflux_app/shared/index.dart';
 import 'index.dart';
 
 class BackupWalletPage extends GetView<BackupWalletController> {
-  const BackupWalletPage({Key? key}) : super(key: key);
+  const BackupWalletPage({super.key});
 
   // 主视图
   Widget _buildView() {

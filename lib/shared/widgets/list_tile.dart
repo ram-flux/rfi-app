@@ -35,7 +35,7 @@ class ListTileWidget extends StatelessWidget {
   final GestureLongPressCallback? onLongPress;
 
   const ListTileWidget({
-    Key? key,
+    super.key,
     this.title,
     this.subtitle,
     this.description,
@@ -46,8 +46,7 @@ class ListTileWidget extends StatelessWidget {
     this.crossAxisAlignment,
     this.onTap,
     this.onLongPress,
-  })  : padding = padding ?? EdgeInsets.zero,
-        super(key: key);
+  }) : padding = padding ?? EdgeInsets.zero;
 
   _buildView() {
     List<Widget> widgets = [];

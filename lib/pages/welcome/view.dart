@@ -6,13 +6,13 @@ import 'index.dart';
 import 'widgets/carousel.dart';
 
 class WelcomePage extends GetView<WelcomeController> {
-  const WelcomePage({Key? key}) : super(key: key);
+  const WelcomePage({super.key});
 
   // 主视图
   Widget _buildView() {
     return Center(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 40.0),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           verticalDirection: VerticalDirection.down,
@@ -23,7 +23,7 @@ class WelcomePage extends GetView<WelcomeController> {
               onPressed: controller.createAccount,
               style: FilledButton.styleFrom(
                 padding: const EdgeInsets.symmetric(horizontal: 14),
-                fixedSize: const Size.fromHeight(50),
+                fixedSize: const Size.fromHeight(40),
               ),
               child: buildButtonContent(LocaleKeys.welcomeCreateAccount.tr),
             ),
@@ -32,7 +32,7 @@ class WelcomePage extends GetView<WelcomeController> {
               onPressed: controller.recoverAccount,
               style: OutlinedButton.styleFrom(
                 padding: const EdgeInsets.symmetric(horizontal: 14),
-                fixedSize: const Size.fromHeight(50),
+                fixedSize: const Size.fromHeight(40),
               ),
               child: buildButtonContent(LocaleKeys.welcomeRecoverAccount.tr),
             ),
