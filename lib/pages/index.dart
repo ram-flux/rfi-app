@@ -13,3 +13,8 @@ export 'contacts/list/index.dart';
 export 'contacts/detail/index.dart';
 export 'contacts/friend_profile/index.dart';
 export 'contacts/friend_requests/index.dart';
+export 'commodity/invite_friends/index.dart';
+export 'commodity/create_commodity/index.dart';
+export 'commodity/charting/index.dart';
+export 'commodity/details/index.dart';
+export 'commodity/new_group/index.dart';

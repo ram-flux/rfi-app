@@ -17,6 +17,7 @@ class MnemonicPhrasePage extends GetView<MnemonicPhraseController> {
       const MnemonicList(),
       ButtonWidget.primary(
         LocaleKeys.authMnemonicPhraseButtonText.tr,
+        height: 48,
         onTap: controller.next,
       ).marginOnly(top: 50),
     ].toColumn().paddingHorizontal(AppSpace.page);

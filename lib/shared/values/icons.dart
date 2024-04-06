@@ -19,4 +19,7 @@ class AssetsIcons {
   static const tabbarFavoritesSvg = 'assets/icons/tabbar-favorites.svg';
   static const tabbarRfSvg = 'assets/icons/tabbar-rf.svg';
   static const tabbarSettingsSvg = 'assets/icons/tabbar-settings.svg';
+  static const addPersonSvg = 'assets/icons/add-person.svg';
+  static const joinCommunitySvg = 'assets/icons/join-community.svg';
+  static const newCommunitySvg = 'assets/icons/new-community.svg';
 }

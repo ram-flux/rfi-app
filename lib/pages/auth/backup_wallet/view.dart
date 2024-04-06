@@ -31,6 +31,7 @@ class BackupWalletPage extends GetView<BackupWalletController> {
       ].toColumn().paddingSymmetric(vertical: 20),
       ButtonWidget.primary(
         LocaleKeys.authBackupWalletButtonText.tr,
+        height: 48,
         onTap: controller.next,
       ).marginOnly(top: 40)
     ].toColumn().paddingHorizontal(AppSpace.page);

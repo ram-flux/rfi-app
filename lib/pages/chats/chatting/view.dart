@@ -50,6 +50,7 @@ class _ChattingGetView extends GetView<ChattingController> {
           // LoadingState
           // EmptyState
           // ErrorState
+
           // MessageList
           _buildMessageList(),
         ],

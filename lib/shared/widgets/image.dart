@@ -114,6 +114,7 @@ class ImageWidget extends StatelessWidget {
           shape: BoxShape.rectangle,
           borderRadius: borderRadius,
           loadStateChanged: (state) => _buildLoadState(context, state),
+          gaplessPlayback: true,
         );
         break;
       case ImageWidgetType.network:
@@ -126,6 +127,7 @@ class ImageWidget extends StatelessWidget {
           shape: BoxShape.rectangle,
           borderRadius: borderRadius,
           loadStateChanged: (state) => _buildLoadState(context, state),
+          gaplessPlayback: true,
         );
         break;
       case ImageWidgetType.file:
@@ -137,6 +139,7 @@ class ImageWidget extends StatelessWidget {
           shape: BoxShape.rectangle,
           borderRadius: borderRadius,
           loadStateChanged: (state) => _buildLoadState(context, state),
+          gaplessPlayback: true,
         );
     }
 

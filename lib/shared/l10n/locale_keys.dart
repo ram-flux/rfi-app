@@ -79,6 +79,11 @@ class LocaleKeys {
   // chats/conversations
   static const chatsConversationsEmptyPlaceholder =
       'chats_conversations_empty_placeholder';
+  static const chatsConversationsAddFriend = 'chats_conversations_add_friend';
+  static const chatsConversationsNewCommunity =
+      'chats_conversations_new_community';
+  static const chatsConversationsJoinCommunity =
+      'chats_conversations_join_community';
 
   // chats/chatting
   static const chatsChattingMessageInputPlaceholder =
@@ -96,4 +101,47 @@ class LocaleKeys {
   static const contactsCommunity = 'contacts_community';
   static const contactsBot = 'contacts_bot';
   static const contactsListEmptyPlaceholder = 'contacts_list_empty_placeholder';
+
+  // commodity/invite_friends
+  static const commodityInviteFriendsAppBarTitle =
+      'invite_friendsApp_bar_title';
+
+  // commodity/create_commodity
+  static const commodityCreateCommodityAppBarTitle =
+      'create_commodityApp_bar_title';
+  static const commodityCreateCommodityNameFieldLabel =
+      'create_commodity_name_field_label';
+  static const commodityCreateCommodityNameFieldHint =
+      'create_commodity_name_field_hint';
+  static const commodityCreateCommodityNameFieldError =
+      'create_commodity_name_field_error';
+  static const commodityCreateCommodityListTitle =
+      'create_commodity_list_title';
+
+  // commodity/charting
+
+  // commodity/details
+  static const commodityDetailsAppBarTitle = 'commodity_detailsApp_bar_title';
+  static const commodityDetailsCommodityName =
+      'commodity_details_commodity_name';
+  static const commodityDetailsCommodityAccount =
+      'commodity_details_commodity_account';
+  // 查看聊天内容
+  static const commodityDetailsViewChatContent =
+      'commodity_details_view_chat_content';
+  // 消息免打扰
+  static const commodityDetailsMessageMute = 'commodity_details_message_mute';
+  // 保存到通讯录
+  static const commodityDetailsSaveToContacts =
+      'commodity_details_save_to_contacts';
+  // 置顶社区
+  static const commodityDetailsPinCommodity = 'commodity_details_pin_commodity';
+  // 新建小组
+  static const commodityDetailsCreateGroup = 'commodity_details_create_group';
+  // 退出社区
+  static const commodityDetailsExitCommodity =
+      'commodity_details_exit_commodity';
+  // 解散社区
+  static const commodityDetailsDismissCommodity =
+      'commodity_details_dismiss_commodity';
 }

@@ -5,7 +5,7 @@ class WelcomeController extends GetxController {
   WelcomeController();
 
   void createAccount() {
-    Get.toNamed(RouteNames.authPassword);
+    Get.toNamed(RouteNames.authBackupWallet);
   }
 
   void recoverAccount() {

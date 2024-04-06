@@ -76,10 +76,32 @@ class ConversationsPage extends GetView<ConversationsController> {
           appBar: mainAppBarWidget(
             titleString: 'RamFlux',
             actions: [
-              ButtonWidget.icon(IconWidget.icon(
-                Icons.add,
-                color: AppColors.onTertiaryContainer,
-              ))
+              PopupMenuButtonWidget(
+                onSelected: (value) {
+                  debugPrint(value);
+                },
+                icon: IconWidget.icon(
+                  Icons.add,
+                  color: AppColors.onTertiaryContainer,
+                ),
+                items: [
+                  PopupMenuButtonItem(
+                    text: LocaleKeys.chatsConversationsAddFriend.tr,
+                    imageUrl: AssetsIcons.addPersonSvg,
+                    value: 'add_friend',
+                  ),
+                  PopupMenuButtonItem(
+                    text: LocaleKeys.chatsConversationsNewCommunity.tr,
+                    imageUrl: AssetsIcons.newCommunitySvg,
+                    value: 'new_community',
+                  ),
+                  PopupMenuButtonItem(
+                    text: LocaleKeys.chatsConversationsJoinCommunity.tr,
+                    imageUrl: AssetsIcons.joinCommunitySvg,
+                    value: 'join_community',
+                  ),
+                ],
+              ),
             ],
           ),
           body: SafeArea(

@@ -68,6 +68,9 @@ Map<String, String> zh_CN = {
 
   // chats/conversations
   LocaleKeys.chatsConversationsEmptyPlaceholder: '让我们开始聊天吧!',
+  LocaleKeys.chatsConversationsAddFriend: '添加好友',
+  LocaleKeys.chatsConversationsNewCommunity: '新建社区',
+  LocaleKeys.chatsConversationsJoinCommunity: '加入社区',
 
   // chats/chatting
   LocaleKeys.chatsChattingMessageInputPlaceholder: '发送给@{name}',
@@ -81,4 +84,28 @@ Map<String, String> zh_CN = {
   LocaleKeys.contactsCommunity: '社区',
   LocaleKeys.contactsBot: '精灵',
   LocaleKeys.contactsListEmptyPlaceholder: '开始添加第一个联系人吧!',
+
+  // commodity/invite_friends
+  LocaleKeys.commodityInviteFriendsAppBarTitle: '邀请好友加入社区',
+
+  // commodity/create_commodity
+  LocaleKeys.commodityCreateCommodityAppBarTitle: '创建社区',
+  LocaleKeys.commodityCreateCommodityNameFieldLabel: '名称',
+  LocaleKeys.commodityCreateCommodityNameFieldHint: '请输入社区名称',
+  LocaleKeys.commodityCreateCommodityNameFieldError: '社区名称不能为空',
+  LocaleKeys.commodityCreateCommodityListTitle: '{number} 个成员',
+
+  // commodity/charting
+
+  // commodity/details
+  LocaleKeys.commodityDetailsAppBarTitle: '成员（@count）',
+  LocaleKeys.commodityDetailsCommodityName: '社区名称',
+  LocaleKeys.commodityDetailsCommodityAccount: '社区账号',
+  LocaleKeys.commodityDetailsViewChatContent: '查看聊天内容',
+  LocaleKeys.commodityDetailsMessageMute: '消息免打扰',
+  LocaleKeys.commodityDetailsSaveToContacts: '保存到通讯录',
+  LocaleKeys.commodityDetailsPinCommodity: '置顶社区',
+  LocaleKeys.commodityDetailsCreateGroup: '新建小组',
+  LocaleKeys.commodityDetailsExitCommodity: '退出社区',
+  LocaleKeys.commodityDetailsDismissCommodity: '解散社区',
 };

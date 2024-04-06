@@ -343,6 +343,7 @@ class InputWidget extends StatelessWidget {
         ),
         hintText: hintText,
         hintStyle: AppTextStyles.bodyText1?.copyWith(
+          fontSize: fontSize,
           fontWeight: FontWeight.w300,
           color: AppColors.secondary,
         ),

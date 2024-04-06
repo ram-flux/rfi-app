@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -70,15 +72,23 @@ class BuildNavigation extends StatelessWidget {
             .expanded(),
       );
     }
-    return BottomAppBar(
-      color: AppColors.surface,
-      elevation: 0,
-      child: ws
-          .toRow(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
-          )
-          .height(kBottomNavigationBarHeight),
+    return ClipRect(
+      child: BackdropFilter(
+        filter: ImageFilter.blur(
+          sigmaX: 20,
+          sigmaY: 20,
+        ),
+        child: BottomAppBar(
+          color: AppColors.surface.withOpacity(0.2),
+          elevation: 0,
+          child: ws
+              .toRow(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+              )
+              .height(kBottomNavigationBarHeight),
+        ),
+      ),
     );
   }
 }

@@ -22,6 +22,9 @@ class ListTileWidget extends StatelessWidget {
   /// 右侧图标
   final List<Widget>? trailing;
 
+  /// 分割线颜色
+  final Color? separatorColor;
+
   /// padding 边框间距
   final EdgeInsetsGeometry? padding;
 
@@ -42,6 +45,7 @@ class ListTileWidget extends StatelessWidget {
     this.leading,
     this.leadingSpace,
     this.trailing,
+    this.separatorColor = Colors.transparent,
     EdgeInsetsGeometry? padding,
     this.crossAxisAlignment,
     this.onTap,
@@ -90,12 +94,19 @@ class ListTileWidget extends StatelessWidget {
       );
     }
 
-    return widgets
-        .toRow(
-          crossAxisAlignment: crossAxisAlignment ?? CrossAxisAlignment.center,
-        )
+    return <Widget>[
+      widgets
+          .toRow(
+            crossAxisAlignment: crossAxisAlignment ?? CrossAxisAlignment.center,
+          )
+          .padding(value: padding),
+      Container(
+        height: 1,
+        color: separatorColor,
+      ),
+    ]
+        .toColumn()
         .backgroundColor(Colors.transparent)
-        .padding(value: padding)
         .onTap(onTap)
         .onLongPress(onLongPress);
   }

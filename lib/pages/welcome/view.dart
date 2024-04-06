@@ -12,7 +12,7 @@ class WelcomePage extends GetView<WelcomeController> {
   Widget _buildView() {
     return Center(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        padding: EdgeInsets.symmetric(horizontal: AppSpace.page),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           verticalDirection: VerticalDirection.down,
@@ -23,18 +23,18 @@ class WelcomePage extends GetView<WelcomeController> {
               onPressed: controller.createAccount,
               style: FilledButton.styleFrom(
                 padding: const EdgeInsets.symmetric(horizontal: 14),
-                fixedSize: const Size.fromHeight(40),
+                fixedSize: const Size.fromHeight(48),
               ),
-              child: buildButtonContent(LocaleKeys.welcomeCreateAccount.tr),
+              child: _buildButtonContent(LocaleKeys.welcomeCreateAccount.tr),
             ),
             const SizedBox(height: 26),
             OutlinedButton(
               onPressed: controller.recoverAccount,
               style: OutlinedButton.styleFrom(
                 padding: const EdgeInsets.symmetric(horizontal: 14),
-                fixedSize: const Size.fromHeight(40),
+                fixedSize: const Size.fromHeight(48),
               ),
-              child: buildButtonContent(LocaleKeys.welcomeRecoverAccount.tr),
+              child: _buildButtonContent(LocaleKeys.welcomeRecoverAccount.tr),
             ),
           ],
         ),
@@ -42,7 +42,7 @@ class WelcomePage extends GetView<WelcomeController> {
     );
   }
 
-  Widget buildButtonContent(String buttonText) {
+  Widget _buildButtonContent(String buttonText) {
     return Stack(
       children: [
         Row(

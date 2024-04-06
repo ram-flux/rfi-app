@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:bip39/bip39.dart' as bip39;
 import 'package:ramflux_app/shared/index.dart';
 
 class MnemonicList extends StatefulWidget {
@@ -10,7 +9,13 @@ class MnemonicList extends StatefulWidget {
 }
 
 class _MnemonicListState extends State<MnemonicList> {
-  String randomMnemonic = bip39.generateMnemonic();
+  late String randomMnemonic;
+
+  @override
+  Future<void> initState() async {
+    super.initState();
+    randomMnemonic = await AuthService.to.getPhrase();
+  }
 
   Widget _buildItem(String text, int index) {
     return Chip(

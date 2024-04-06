@@ -5,7 +5,7 @@ export 'components/index.dart';
 export 'extensions/index.dart';
 export 'l10n/index.dart';
 export 'models/index.dart';
-export 'router/index.dart';
+export 'routes/index.dart';
 export 'services/index.dart';
 export 'theme/index.dart';
 export 'utils/index.dart';
